@@ -1,19 +1,3 @@
-from dataclasses import dataclass
-from datetime import datetime
-
-
-# @dataclass
-# class FuelPrice:
-#     station_name: str
-
-#     sp95_name: str
-#     sp95_price: float
-#     sp95_updated_at: datetime
-
-#     diesel_name: str
-#     diesel_price: float
-#     diesel_updated_at: datetime
-
 from datetime import datetime
 from sqlalchemy import String, Float, DateTime
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase

@@ -14,9 +14,11 @@ with get_db() as db:
 
     super_u = SuperUProvider()
     prix = super_u.get_price("hyperu-vallet_81980") # perif
+    prix.station_name = "vallet_perif"
     db.add(prix)
     db.commit()
     prix = super_u.get_price("hyperu-vallet_81979") # magasin
+    prix.station_name = "vallet_magasin"
     db.add(prix)
     db.commit()
 
