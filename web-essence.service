@@ -1,0 +1,16 @@
+[Unit]
+Description=Serveur Web Prix Essence
+After=network.target
+
+[Service]
+ExecStart=/home/emilien/prix_essence/web.sh
+Restart=always
+RestartSec=5
+User=emilien
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/home/emilien/prix_essence
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

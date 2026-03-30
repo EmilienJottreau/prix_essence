@@ -1,0 +1,54 @@
+2026-03-28 05:00:05
+launch browser
+navigate
+navigate ok, searching element
+launch browser
+navigate
+navigate ok, searching element
+2026-03-29 05:00:06
+launch browser
+navigate
+navigate ok, searching element
+Traceback (most recent call last):
+  File "/home/emilien/prix_essence/main.py", line 19, in <module>
+    prix = super_u.get_price("hyperu-vallet_81980") # perif
+  File "/home/emilien/prix_essence/sources/super_u.py", line 23, in get_price
+    table = page.locator("table", has_text="SP95").first.inner_html()
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/sync_api/_generated.py", line 17064, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/_impl/_locator.py", line 468, in inner_html
+    return await self._frame.inner_html(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/_impl/_frame.py", line 719, in inner_html
+    return await self._channel.send(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+        "innerHTML", self._timeout, locals_to_params(locals())
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/emilien/prix_essence/.venv/lib/python3.14/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.inner_html: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("table").filter(has_text="SP95").first
+
+2026-03-30 05:00:05
+launch browser
+navigate
+navigate ok, searching element
+launch browser
+navigate
+navigate ok, searching element

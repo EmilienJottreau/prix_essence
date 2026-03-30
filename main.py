@@ -4,6 +4,9 @@ from sources.total import TotalProvider
 
 from database import get_db
 
+from datetime import datetime
+print(datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
+
 with get_db() as db:
 
     total = TotalProvider()
